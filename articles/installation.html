@@ -83,14 +83,21 @@
                   </div>
                     <h1 id="installing-pnp-powershell">Installing PnP PowerShell</h1>
 
-<p>You can run the following commands to install the PowerShell cmdlets:</p>
-<pre><code class="lang-powershell">Install-Module -Name &quot;PnP.PowerShell&quot;
+<p>You can run the following commands to install the latest stable PowerShell cmdlets for the current user:</p>
+<pre><code class="lang-powershell">Install-Module PnP.PowerShell -Scope CurrentUser
+</code></pre>
+<p>If you want to install or update to the latest nightly built prerelease of PnP PowerShell for the current user, run:</p>
+<pre><code class="lang-powershell">Install-Module PnP.PowerShell -Scope CurrentUser -AllowPrerelease
 </code></pre>
 <p>This will work on Windows / Linux / MacOS.</p>
+<h1 id="uninstalling-pnp-powershell">Uninstalling PnP PowerShell</h1>
+<p>In case you would like to remove PnP PowerShell, you can run:</p>
+<pre><code class="lang-powershell">Uninstall-Module PnP.PowerShell
+</code></pre>
 <h2 id="using-pnp-powershell-in-the-azure-cloud-shell">Using PnP PowerShell in the Azure Cloud Shell</h2>
 <p>Open the Azure Cloud Shell at <a href="https://shell.azure.com">https://shell.azure.com</a></p>
-<p>Select PowerShell as your shell and enter</p>
-<pre><code class="lang-powershell">Install-Module -Name &quot;PnP.PowerShell&quot;
+<p>Select PowerShell as your shell and run:</p>
+<pre><code class="lang-powershell">Install-Module PnP.PowerShell
 </code></pre>
 <p>As the Azure Cloud Shell retains its settings and installed modules, the next time you open the Azure Cloud Shell PnP PowerShell will be available for you to use.</p>
 </article>
@@ -119,5 +126,12 @@
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

@@ -106,6 +106,7 @@
  [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows to run an arbitrary search query against the SharePoint search index.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Submit-PnPSearchQuery -Query &quot;finance&quot;
@@ -123,6 +124,10 @@
 <pre><code class="lang-powershell">Submit-PnPSearchQuery -Query &quot;Title:Intranet*&quot; -Refiners &quot;contentclass,FileType(filter=6/0/*)&quot;
 </code></pre>
 <p>Returns absolutely all items indexed by SharePoint Search of which the title starts with the word Intranet, and return refiners for contentclass and FileType managed properties</p>
+<h3 id="example-5">EXAMPLE 5</h3>
+<pre><code class="lang-powershell">Submit-PnPSearchQuery -Query &quot;contentclass:STS_ListItem_DocumentLibrary&quot; -SelectProperties ComplianceTag,InformationProtectionLabelId -All
+</code></pre>
+<p>Returns absolutely all items indexed by SharePoint Search which represent a document in a document library and instructs explicitly to return the managed properties InformationProtectionLabelId and ComplianceTag which will give insight into the sensitivity and retention labels assigned to the documents</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-all">-All</h3>
 <p>Automatically page results until the end to get more than 500. Use with caution!</p>
@@ -147,7 +152,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-collapsespecification">-CollapseSpecification</h3>
-<p>Limit the number of items per the collapse specification. See <a href="https://docs.microsoft.com/en-us/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property">https://docs.microsoft.com/en-us/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property</a> for more information.</p>
+<p>Limit the number of items per the collapse specification. See <a href="https://learn.microsoft.com/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property">https://learn.microsoft.com/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property</a> for more information.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 
@@ -301,7 +306,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-refinementfilters">-RefinementFilters</h3>
-<p>The set of refinement filters used.</p>
+<p>The set of refinement filters used, separated by a comma.</p>
 <pre><code class="lang-yaml">Type: String[]
 Parameter Sets: (All)
 
@@ -334,7 +339,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-selectproperties">-SelectProperties</h3>
-<p>The list of properties to return in the search results.</p>
+<p>The list of properties to return in the search results, separated by a comma. I.e. ComplianceTag,InformationProtectionLabelId.</p>
 <pre><code class="lang-yaml">Type: String[]
 Parameter Sets: (All)
 
@@ -427,5 +432,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>
