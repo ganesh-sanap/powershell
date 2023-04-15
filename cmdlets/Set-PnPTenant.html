@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html lang="en">
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Set-PnPTenant | PnP PowerShell </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Set-PnPTenant | PnP PowerShell ">
-    <meta name="generator" content="docfx 2.51.0.0">
-    <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
+    <meta name="generator" content="docfx ">
+  <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
@@ -17,13 +17,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../images/logo.svg" alt="">
               </a>
@@ -47,7 +47,7 @@
               </form>
             </div>
           </div>
-        </nav>        
+        </nav>
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -57,17 +57,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -81,7 +81,7 @@
                   <div class="contribution-panel mobile-hide pull-right">
                       <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-                    <h1 id="set-pnptenant">Set-PnPTenant</h1>
+  <h1 id="set-pnptenant">Set-PnPTenant</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
 <p><strong>Required Permissions</strong></p>
@@ -167,6 +167,28 @@
  [-CoreRequestFilesLinkEnabled &lt;Boolean&gt;]
  [-CoreRequestFilesLinkExpirationInDays &lt;Boolean&gt;]
  [-LabelMismatchEmailHelpLink &lt;String&gt;]
+ [-DisableDocumentLibraryDefaultLabeling &lt;Boolean&gt;]
+ [-DisableListSync &lt;Boolean&gt;]
+ [-IsEnableAppAuthPopUpEnabled &lt;Boolean&gt;]
+ [-ExpireVersionsAfterDays &lt;Int32&gt;]
+ [-MajorVersionLimit &lt;Int32&gt;]
+ [-EnableAutoExpirationVersionTrim &lt;Boolean&gt;]
+ [-OneDriveLoopSharingCapability &lt;SharingCapabilities&gt;]
+ [-OneDriveLoopDefaultSharingLinkScope &lt;SharingScope&gt;]
+ [-OneDriveLoopDefaultSharingLinkRole &lt;Role&gt;]
+ [-CoreLoopSharingCapability &lt;SharingCapabilities&gt;]
+ [-CoreLoopDefaultSharingLinkScope &lt;SharingScope&gt;]
+ [-CoreLoopDefaultSharingLinkRole &lt;Role&gt;]
+ [-DisableVivaConnectionsAnalytics &lt;Boolean&gt;]
+ [-CoreDefaultLinkToExistingAccess &lt;Boolean&gt;]
+ [-HideSyncButtonOnTeamSite &lt;Boolean&gt;]
+ [-CoreBlockGuestsAsSiteAdmin &lt;SharingState&gt;]
+ [-IsWBFluidEnabled &lt;Boolean&gt;]
+ [-IsCollabMeetingNotesFluidEnabled &lt;Boolean&gt;]
+ [-AllowAnonymousMeetingParticipantsToAccessWhiteboards &lt;SharingState&gt;]
+ [-IBImplicitGroupBased &lt;Boolean&gt;]
+ [-ShowOpenInDesktopOptionForSyncedFiles &lt;Boolean&gt;]
+ [-ShowPeoplePickerGroupSuggestionsForIB &lt;Boolean&gt;]
  [-Force] [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
@@ -1271,6 +1293,336 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-coreloopsharingcapability">-CoreLoopSharingCapability</h3>
+<p>Gets or sets collaboration type for fluid on core partition</p>
+<p>The valid values are:</p>
+<ul>
+<li>Disabled</li>
+<li>ExternalUserSharingOnly</li>
+<li>ExternalUserAndGuestSharing</li>
+<li>ExistingExternalUserSharingOnly</li>
+</ul>
+<pre><code class="lang-yaml">Type: SharingCapabilities
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-coreloopsharingcapability-1">-CoreLoopSharingCapability</h3>
+<p>Gets or sets collaboration type for fluid on core partition</p>
+<p>The valid values are:</p>
+<ul>
+<li>Disabled</li>
+<li>ExternalUserSharingOnly</li>
+<li>ExternalUserAndGuestSharing</li>
+<li>ExistingExternalUserSharingOnly</li>
+</ul>
+<pre><code class="lang-yaml">Type: SharingCapabilities
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-onedriveloopsharingcapability">-OneDriveLoopSharingCapability</h3>
+<p>When sharing a whiteboard in a Teams meeting, Whiteboard creates a sharing link that’s accessible by anyone within the organization and automatically shares the whiteboard with any in-tenant users in the meeting.</p>
+<p>There’s an additional capability for temporary collaboration by external and shared device accounts during a meeting. This allows these users to temporarily view and collaborate on whiteboards when they’re shared in a Teams meeting, similar to PowerPoint Live sharing.</p>
+<p>If you have the external sharing for OneDrive for Business allowed, no further action is required. If you have external sharing for OneDrive for Business disabled, you can leave it disabled but you must enable this new setting. The setting will not take effect until the SharingCapability 'ExternalUserAndGuestSharing' is also enabled at Tenant level. For more information, see <a href="https://support.microsoft.com/office/enable-microsoft-whiteboard-for-your-organization-1caaa2e2-5c18-4bdf-b878-2d98f1da4b24">Enable Microsoft Whiteboard for your organization</a>.</p>
+<p>The valid values are:</p>
+<ul>
+<li>Disabled</li>
+<li>ExternalUserSharingOnly</li>
+<li>ExternalUserAndGuestSharing</li>
+<li>ExistingExternalUserSharingOnly</li>
+</ul>
+<pre><code class="lang-yaml">Type: SharingCapabilities
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-onedriveloopdefaultsharinglinkscope">-OneDriveLoopDefaultSharingLinkScope</h3>
+<p>Gets or sets default share link scope for fluid on OneDrive sites.</p>
+<p>The valid values are:</p>
+<ul>
+<li>Anyone</li>
+<li>Organization</li>
+<li>SpecificPeople</li>
+<li>Uninitialized</li>
+</ul>
+<pre><code class="lang-yaml">Type: SharingScope
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-coreloopdefaultsharinglinkscope">-CoreLoopDefaultSharingLinkScope</h3>
+<p>Gets or sets default share link scope for fluid on SharePoint sites.</p>
+<p>The valid values are:</p>
+<ul>
+<li>Anyone</li>
+<li>Organization</li>
+<li>SpecificPeople</li>
+<li>Uninitialized</li>
+</ul>
+<pre><code class="lang-yaml">Type: SharingScope
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-coreloopdefaultsharinglinkrole">-CoreLoopDefaultSharingLinkRole</h3>
+<p>Gets or sets default share link role for fluid on SharePoint sites.</p>
+<p>The valid values are:</p>
+<ul>
+<li>Edit</li>
+<li>LimitedEdit</li>
+<li>LimitedView</li>
+<li>ManageList</li>
+<li>None</li>
+<li>Owner</li>
+<li>RestrictedView</li>
+<li>Review</li>
+<li>Submit</li>
+</ul>
+<pre><code class="lang-yaml">Type: Role
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-iswbfluidenabled">-IsWBFluidEnabled</h3>
+<p>Sets whether Whiteboard is enabled or disabled for OneDrive for Business users. Whiteboard on OneDrive for Business is automatically enabled for applicable Microsoft 365 tenants but can be disabled.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-iscollabmeetingnotesfluidenabled">-IsCollabMeetingNotesFluidEnabled</h3>
+<p>Gets or sets a value to specify whether CollabMeetingNotes Fluid Framework is enabled If IsFluidEnabled disabled, IsCollabMeetingNotesFluidEnabled will be disabled automatically If IsFluidEnabled enabled, IsCollabMeetingNotesFluidEnabled will be enabled automatically IsCollabMeetingNotesFluidEnabled can be enabled only when IsFluidEnabled is already enabled</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-allowanonymousmeetingparticipantstoaccesswhiteboards">-AllowAnonymousMeetingParticipantsToAccessWhiteboards</h3>
+<p>When you share a whiteboard in a Teams meeting, Whiteboard creates a sharing link. This link is accessible by anyone within the organization. The whiteboard is also shared with any in-tenant users in the meeting. Whiteboards are shared using company-shareable links, regardless of the default setting. Support for the default sharing link type is planned.</p>
+<p>There's more capability for temporary collaboration by external and shared device accounts during a Teams meeting. Users can temporarily view and collaborate on whiteboards that are shared in a meeting, in a similar way to PowerPoint Live sharing.</p>
+<p>In this case, Whiteboard provides temporary viewing and collaboration on the whiteboard during the Teams meeting only. A share link isn't created and Whiteboard doesn't grant access to the file.</p>
+<p>If you have external sharing enabled for OneDrive for Business, no further action is required.</p>
+<p>If you restrict external sharing for OneDrive for Business, you can keep it restricted, and just enable this new setting in order for external and shared device accounts to work. For more information, see <a href="https://learn.microsoft.com/en-us/microsoft-365/whiteboard/manage-sharing-organizations">Manage sharing for Microsoft Whiteboard</a>.</p>
+<pre><code class="lang-yaml">Type: SharingState
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-ibimplicitgroupbased">-IBImplicitGroupBased</h3>
+<p>Gets or sets IBImplicitGroupBased value</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-showopenindesktopoptionforsyncedfiles">-ShowOpenInDesktopOptionForSyncedFiles</h3>
+<p>The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) displays the &quot;Open in desktop&quot; option when users go to SharePoint or OneDrive on the web and open the shortcut menu for a file that they're syncing with the OneDrive sync app.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-showpeoplepickergroupsuggestionsforib">-ShowPeoplePickerGroupSuggestionsForIB</h3>
+<p>The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows showing group suggestions for information barriers (IBs) in the People Picker.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-coreblockguestsassiteadmin">-CoreBlockGuestsAsSiteAdmin</h3>
+<pre><code class="lang-yaml">Type: SharingState
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-hidesyncbuttononteamsite">-HideSyncButtonOnTeamSite</h3>
+<p>To enable or disable Sync button on Team sites.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-coredefaultlinktoexistingaccess">-CoreDefaultLinkToExistingAccess</h3>
+<p>Gets or sets default share link to existing access on core partition</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-disablevivaconnectionsanalytics">-DisableVivaConnectionsAnalytics</h3>
+<p>Use this parameter to disable/enable Viva connection analytics.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-onedriveloopdefaultsharinglinkrole">-OneDriveLoopDefaultSharingLinkRole</h3>
+<p>Gets or sets default share link role for fluid on OneDrive sites.</p>
+<p>The valid values are:</p>
+<ul>
+<li>Edit</li>
+<li>LimitedEdit</li>
+<li>LimitedView</li>
+<li>ManageList</li>
+<li>None</li>
+<li>Owner</li>
+<li>RestrictedView</li>
+<li>Review</li>
+<li>Submit</li>
+</ul>
+<pre><code class="lang-yaml">Type: Role
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-majorversionlimit">-MajorVersionLimit</h3>
+<pre><code class="lang-yaml">Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-expireversionsafterdays">-ExpireVersionsAfterDays</h3>
+<pre><code class="lang-yaml">Type: Int32
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-enableautoexpirationversiontrim">-EnableAutoExpirationVersionTrim</h3>
+<p>Enable or disable AutoExpiration version trim for the document library. Set to <code>$true</code> to enable, <code>$false</code> to disable.</p>
+<p>Parameter <code>ExpireVersionsAfterDays</code> is required when <code>EnableAutoExpirationVersionTrim</code> is false. Set <code>ExpireVersionsAfterDays</code> to 0 for NoExpiration, set it to greater or equal 30 for ExpireAfter.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-isenableappauthpopupenabled">-IsEnableAppAuthPopUpEnabled</h3>
+<p>Enables or disables users in the organization to authenticate SharePoint applications using popups.</p>
+<p>This parameter affects the way code in SharePoint interacts with Azure AD to get tokens to access APIs. In scenarios where third-party cookies are disabled (such as Safari browsers with ITP feature enabled), any code that requires a token to access an API automatically triggers a full page refresh. When IsEnableAppAuthPopUpEnabled is set to $true, SharePoint will instead surface a popup in this scenario.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-disablelistsync">-DisableListSync</h3>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-onedriverequestfileslinkexpirationindays">-OneDriveRequestFilesLinkExpirationInDays</h3>
+<p>Specifies the number of days before a Request files link expires for all OneDrive sites.
+The value can be from 0 to 730 days.
+To remove the expiration requirement, set the value to zero (0).</p>
+<pre><code class="lang-yaml">Type: Int
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-disabledocumentlibrarydefaultlabeling">-DisableDocumentLibraryDefaultLabeling</h3>
+<p>Use this turn off setting the default sensitivity label for a document library.
+For more information on this feature, please take a look <a href="https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-default-label?view=o365-worldwide">here</a></p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-force">-Force</h3>
 <p>If provided, no confirmation will be requested and the action will be performed</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
@@ -1293,7 +1645,7 @@ Accept wildcard characters: False
             </div>
           </div>        </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -1301,14 +1653,14 @@ Accept wildcard characters: False
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
             <img src="https://m365-visitor-stats.azurewebsites.net/@pnp.github.io/index/" alt="spacer">
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
