@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Get-PnPUserProfileProperty | PnP PowerShell </title>
+    <title>PnP PowerShell predictor | PnP PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Get-PnPUserProfileProperty | PnP PowerShell ">
+    <meta name="title" content="PnP PowerShell predictor | PnP PowerShell ">
     <meta name="generator" content="docfx ">
   <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -79,70 +79,13 @@
             <article class="content wrap" id="_content" data-uid="">
                 
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/pnp/powershell/blob/dev/pages/articles/powershellpredictor.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-  <h1 id="get-pnpuserprofileproperty">Get-PnPUserProfileProperty</h1>
+  <h1 id="pnp-powershell-predictor">PnP PowerShell predictor</h1>
 
-<h2 id="synopsis">SYNOPSIS</h2>
-<p><strong>Required Permissions</strong></p>
-<ul>
-<li>SharePoint: Access to the SharePoint Tenant Administration site</li>
-</ul>
-<p>You must connect to the tenant admin website (https://&lt;tenant&gt;-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.</p>
-<h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Get-PnPUserProfileProperty -Account &lt;String[]&gt; [-Properties &lt;String[]&gt;] [-Connection &lt;PnPConnection&gt;]
-</code></pre>
-<h2 id="description">DESCRIPTION</h2>
-<p>Requires a connection to a SharePoint Tenant Admin site.</p>
-<h2 id="examples">EXAMPLES</h2>
-<h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Get-PnPUserProfileProperty -Account 'user@domain.com'
-</code></pre>
-<p>Returns the profile properties for the specified user</p>
-<h3 id="example-2">EXAMPLE 2</h3>
-<pre><code class="lang-powershell">Get-PnPUserProfileProperty -Account 'user@domain.com','user2@domain.com'
-</code></pre>
-<p>Returns the profile properties for the specified users</p>
-<h3 id="example-3">EXAMPLE 3</h3>
-<pre><code class="lang-powershell">Get-PnPUserProfileProperty -Account 'user@domain.com' -Properties 'FirstName','LastName'
-</code></pre>
-<p>Returns the FirstName and LastName profile properties for the specified user</p>
-<h2 id="parameters">PARAMETERS</h2>
-<h3 id="-account">-Account</h3>
-<p>The account of the user, formatted either as a login name, or as a claims identity, e.g. i:0#.f|membership|user@domain.com</p>
-<pre><code class="lang-yaml">Type: String[]
-Parameter Sets: (All)
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-properties">-Properties</h3>
-<p>The user profile properties that are requested for the user e.g. FirstName, LastName etc.</p>
-<pre><code class="lang-yaml">Type: String[]
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-connection">-Connection</h3>
-<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
-<pre><code class="lang-yaml">Type: PnPConnection
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
+<p>The PnP PowerShell predictor is easy to install and use. It provides great help in finding the cmdlet within PnP PowerShell you need and which parameters to provide to get the job done. It will show handy autocomplete options which are automatically generated each night based on the samples provided with each cmdlet in our documentation. This allows you to quickly pick not just the cmdlet you need, but also have all the parameters you need showing up already. You would then only still need to change the values of the parameters to match your scenario.</p>
+<p>PnP PowerShell predictor can be installed as an add-on module to PnP PowerShell.</p>
+<p>More information on how to set it up and to download it can be found on the <a href="https://github.com/anoopt/PnP.PowerShell.Predictor">PnP PowerShell Predictor</a> GitHub page.</p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
