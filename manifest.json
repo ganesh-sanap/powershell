@@ -442,10 +442,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFileAnonymousSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFileAnonymousSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Add-PnPFileOrganizationalSharingLink.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPFileOrganizationalSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFileSharingInvite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFileSharingInvite.html"
         }
       },
       "version": ""
@@ -482,10 +502,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFolderAnonymousSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFolderAnonymousSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Add-PnPFolderOrganizationalSharingLink.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPFolderOrganizationalSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFolderSharingInvite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFolderSharingInvite.html"
         }
       },
       "version": ""
