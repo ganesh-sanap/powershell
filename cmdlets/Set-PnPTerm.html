@@ -89,13 +89,13 @@
 <h3 id="by-term-id">By Term Id</h3>
 <pre><code>Set-PnPTerm -Identity &lt;Guid&gt; [-Name &lt;String&gt;] [-Lcid &lt;Int32&gt;] [-Description &lt;String&gt;]
  [-CustomProperties &lt;Hashtable&gt;] [-LocalCustomProperties &lt;Hashtable&gt;] [-DeleteAllCustomProperties]
- [-DeleteAllLocalCustomProperties] [-Deprecated &lt;bool&gt;] [-TermStore &lt;TaxonomyTermStorePipeBind&gt;]
+ [-DeleteAllLocalCustomProperties] [-Deprecated &lt;bool&gt;] [-AvailableForTagging &lt;bool&gt;] [-TermStore &lt;TaxonomyTermStorePipeBind&gt;]
  
 </code></pre>
 <h3 id="by-term-name">By Term Name</h3>
 <pre><code>Set-PnPTerm -Identity &lt;String&gt; [-Name &lt;String&gt;] [-Lcid &lt;Int32&gt;] [-Description &lt;String&gt;]
  [-CustomProperties &lt;Hashtable&gt;] [-LocalCustomProperties &lt;Hashtable&gt;] [-DeleteAllCustomProperties]
- [-DeleteAllLocalCustomProperties] [-Deprecated &lt;bool&gt;] -TermSet &lt;TaxonomyTermSetPipeBind&gt; -TermGroup &lt;TaxonomyTermGroupPipeBind&gt;
+ [-DeleteAllLocalCustomProperties] [-Deprecated &lt;bool&gt;] [-AvailableForTagging &lt;bool&gt;] -TermSet &lt;TaxonomyTermSetPipeBind&gt; -TermGroup &lt;TaxonomyTermGroupPipeBind&gt;
  [-TermStore &lt;TaxonomyTermStorePipeBind&gt;] 
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
@@ -118,6 +118,18 @@
 </code></pre>
 <p>Marks an existing term as deprecated, hiding it from users.</p>
 <h2 id="parameters">PARAMETERS</h2>
+<h3 id="-availablefortagging">-AvailableForTagging</h3>
+<p>Sets a term to be available for tagging or not.</p>
+<pre><code class="lang-yaml">Type: boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-customproperties">-CustomProperties</h3>
 <p>Sets custom properties.</p>
 <pre><code class="lang-yaml">Type: Hashtable
