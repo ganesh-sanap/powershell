@@ -2305,6 +2305,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPFileInFolder.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPFileInFolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPFileSharingLink.md",
       "output": {
         ".html": {
@@ -2365,20 +2375,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPFolderFile.md",
+      "source_relative_path": "cmdlets/Get-PnPFolderInFolder.md",
       "output": {
         ".html": {
-          "relative_path": "cmdlets/Get-PnPFolderFile.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPFolderFolder.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPFolderFolder.html"
+          "relative_path": "cmdlets/Get-PnPFolderInFolder.html"
         }
       },
       "version": ""
@@ -3305,6 +3305,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSiteSetVersionPolicyProgress.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSiteSetVersionPolicyProgress.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPSiteTemplate.md",
       "output": {
         ".html": {
@@ -3939,6 +3949,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPWebTemplates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPWebhookSubscription.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPWebhookSubscription.html"
         }
       },
       "version": ""
@@ -7878,6 +7898,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/azurefunctions/addpfxcertificate.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/addpfxcertificate.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurefunctions/addpfxcertificatethumbprint.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/addpfxcertificatethumbprint.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/azurefunctions/addpnpposhtoappfilerequirements.png",
       "output": {
         "resource": {
@@ -7962,6 +8002,26 @@
       "output": {
         "resource": {
           "relative_path": "images/azurefunctions/functionappappfilesmenu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurefunctions/whitelistpfxthumbprint.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/whitelistpfxthumbprint.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurefunctions/whitelistpfxthumbprintdetails.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/whitelistpfxthumbprintdetails.png"
         }
       },
       "version": ""

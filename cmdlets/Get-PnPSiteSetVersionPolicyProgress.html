@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Get-PnPFolderItem | PnP PowerShell </title>
+    <title>Get-PnPSiteSetVersionPolicyProgress | PnP PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Get-PnPFolderItem | PnP PowerShell ">
+    <meta name="title" content="Get-PnPSiteSetVersionPolicyProgress | PnP PowerShell ">
     <meta name="generator" content="docfx ">
   <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -77,56 +77,27 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-                
+                <div class="pnp_tags">Available in the current Nightly Release only.</div>
                   <div class="contribution-panel mobile-hide pull-right">
                       <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-  <h1 id="get-pnpfolderitem">Get-PnPFolderItem</h1>
+  <h1 id="get-pnpsitesetversionpolicyprogress">Get-PnPSiteSetVersionPolicyProgress</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>List files and/or subfolders in a folder</p>
+<p>Get the progress of setting version policy for existing document libraries on the site.</p>
 <h2 id="syntax">SYNTAX</h2>
-<h3 id="folder-via-url">Folder via url</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem [-FolderSiteRelativeUrl &lt;String&gt;] [-ItemType &lt;String&gt;] [-ItemName &lt;String&gt;] [-Recursive] [-Verbose] [-Connection &lt;PnPConnection&gt;] 
-</code></pre>
-<h3 id="folder-via-pipebind">Folder via pipebind</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem [-Identity &lt;FolderPipeBind&gt;] [-ItemType &lt;String&gt;] [-ItemName &lt;String&gt;] [-Recursive] [-Verbose] [-Connection &lt;PnPConnection&gt;] 
+<pre><code class="lang-powershell">Get-PnPSiteSetVersionPolicyProgress [-Connection &lt;PnPConnection&gt;] 
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>This cmdlet allows listing of all the content in a folder. It can be used to list all files and folders in a folder and optionally all its subfolders.</p>
-<p>Use <a href="Get-PnPFolderFile.md">Get-PnPFolderFile</a> to retrieve only files and <a href="Get-PnPFolderFolder.md">Get-PnPFolderFolder</a> to retrieve only folders allowing additional properties of the returned items to be requested.</p>
+<p>This cmdlet allows retrieval of the progress of setting version policy for existing document libraries on the site.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem
+<pre><code class="lang-powershell">Get-PnPSiteSetVersionPolicyProgress
 </code></pre>
-<p>Returns all the files and folders in the root of the current web</p>
-<h3 id="example-2">EXAMPLE 2</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem -Recurse
-</code></pre>
-<p>Returns all the files and folders in the entire site. This will take a while to complete and will cause a lot of calls to be made towards SharePoint Online. Use it wisely.</p>
-<h3 id="example-3">EXAMPLE 3</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem -Identity &quot;Shared Documents&quot;
-</code></pre>
-<p>Returns the files and folders located in the 'Shared Documents' folder located in the root of the current web</p>
-<h3 id="example-4">EXAMPLE 4</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem -FolderSiteRelativeUrl &quot;SitePages&quot; -ItemName &quot;Default.aspx&quot;
-</code></pre>
-<p>Returns the file 'Default.aspx' which is located in the folder SitePages which is located in the root of the current web</p>
-<h3 id="example-5">EXAMPLE 5</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem -FolderSiteRelativeUrl &quot;SitePages&quot; -ItemType Folder
-</code></pre>
-<p>Returns all subfolders of the folder SitePages which is located in the root of the current web</p>
-<h3 id="example-6">EXAMPLE 6</h3>
-<pre><code class="lang-powershell">Get-PnPFolder -Identity &quot;Shared Documents&quot; | Get-PnPFolderItem -ItemType File
-</code></pre>
-<p>Returns all files in the &quot;Shared Documents&quot; folder which is located in the root of the current web</p>
-<h3 id="example-7">EXAMPLE 7</h3>
-<pre><code class="lang-powershell">Get-PnPFolderItem -FolderSiteRelativeUrl &quot;SitePages&quot; -Recursive
-</code></pre>
-<p>Returns all files and folders, including contents of any subfolders, in the folder SitePages which is located in the root of the current web</p>
+<p>Returns the progress of setting version policy for existing document libraries on the site.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-connection">-Connection</h3>
-<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection</p>
+<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
 <pre><code class="lang-yaml">Type: PnPConnection
 Parameter Sets: (All)
 
@@ -136,75 +107,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-foldersiterelativeurl">-FolderSiteRelativeUrl</h3>
-<p>The site relative URL of the folder to retrieve</p>
-<pre><code class="lang-yaml">Type: String
-Parameter Sets: Folder via url
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-identity">-Identity</h3>
-<p>A folder instance to the folder to retrieve</p>
-<pre><code class="lang-yaml">Type: FolderPipeBind
-Parameter Sets: Folder via pipebind
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-itemname">-ItemName</h3>
-<p>Name of the item to retrieve (not case sensitive)</p>
-<pre><code class="lang-yaml">Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-itemtype">-ItemType</h3>
-<p>The type of contents to retrieve, either File, Folder or All (default)</p>
-<pre><code class="lang-yaml">Type: String
-Parameter Sets: (All)
-Accepted values: Folder, File, All
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-recursive">-Recursive</h3>
-<p>A switch parameter to include contents of all subfolders in the specified folder</p>
-<pre><code class="lang-yaml">Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-verbose">-Verbose</h3>
-<p>When provided, additional debug statements will be shown while executing the cmdlet.</p>
-<pre><code class="lang-yaml">Type: SwitchParameter
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a>
+<a href="https://learn.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-site-classification#programmatically-read-the-classification-of-a-site">Microsoft Docs documentation</a></p>
 
 </article>
           </div>
