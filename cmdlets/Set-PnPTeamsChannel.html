@@ -90,7 +90,7 @@
 </ul>
 <p>Updates an existing Teams Channel</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Set-PnPTeamsChannel -Team &lt;TeamsTeamPipeBind&gt; -Identity &lt;TeamsChannelPipeBind&gt; [-DisplayName &lt;String&gt;] [-Description &lt;String&gt;] [-IsFavoriteByDefault &lt;Boolean&gt;]
+<pre><code class="lang-powershell">Set-PnPTeamsChannel -Team &lt;TeamsTeamPipeBind&gt; -Identity &lt;TeamsChannelPipeBind&gt; [-DisplayName &lt;String&gt;] [-Description &lt;String&gt;] [-IsFavoriteByDefault &lt;Boolean&gt;] [-AllowNewMessageFromBots &lt;Boolean&gt;] [-AllowNewMessageFromConnectors &lt;Boolean&gt;] [-ReplyRestriction &lt;TeamChannelModerationSettingReplyRestriction&gt;] [-UserNewMessageRestriction &lt;TeamChannelModerationSettingNewMessageRestriction&gt;]
   
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
@@ -105,6 +105,50 @@
 </code></pre>
 <p>Updates the channel called 'MyChannel' to make it visible to members.</p>
 <h2 id="parameters">PARAMETERS</h2>
+<h3 id="-allownewmessagefrombots">-AllowNewMessageFromBots</h3>
+<p>Allows configuring if bots are allowed to post messages in the channel</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-allownewmessagefromconnectors">-AllowNewMessageFromConnectors</h3>
+<p>Allows configuring if connectors are allowed to post messages in the channel</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-replyrestriction">-ReplyRestriction</h3>
+<p>Allows configuring who can reply to posts in the channel</p>
+<pre><code class="lang-yaml">Type: TeamChannelModerationSettingReplyRestriction
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-usernewmessagerestriction">-UserNewMessageRestriction</h3>
+<p>Allows configuring who can post new messages in the channel</p>
+<pre><code class="lang-yaml">Type: TeamChannelModerationSettingNewMessageRestriction
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-description">-Description</h3>
 <p>Changes the description of the specified channel.</p>
 <pre><code class="lang-yaml">Type: String
