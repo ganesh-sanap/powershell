@@ -592,6 +592,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPHomeSite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPHomeSite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Add-PnPHtmlPublishingPageLayout.md",
       "output": {
         ".html": {
@@ -2032,6 +2042,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPContainerType.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPContainerType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPContainerTypeConfiguration.md",
       "output": {
         ".html": {
@@ -2356,6 +2376,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPFileInFolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPFileSensitivityLabelInfo.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPFileSensitivityLabelInfo.html"
         }
       },
       "version": ""
@@ -2946,6 +2976,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPPageLikedByInformation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPageSchedulingEnabled.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPageSchedulingEnabled.html"
         }
       },
       "version": ""
@@ -3782,10 +3822,40 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantInternalSetting.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantInternalSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPTenantRecycleBinItem.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPTenantRecycleBinItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantRestrictedSearchAllowedList.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantRestrictedSearchAllowedList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantRestrictedSearchMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantRestrictedSearchMode.html"
         }
       },
       "version": ""
@@ -7366,6 +7436,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPTenantCdnPolicy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPTenantRestrictedSearchMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPTenantRestrictedSearchMode.html"
         }
       },
       "version": ""
